@@ -1,0 +1,21 @@
+name: NexusHatchlings
+version: ${project.version}
+main: com.nexuscraft.nexushatchlings.NexusHatchlingsPlugin
+api-version: '1.21'
+author: Nexus Universe
+description: Shrink and tame any mob -- baby dragons, baby skeletons, baby wardens, and everything else -- with a thrown Hatchling Crystal (the same "throw it, the mob picks it up" mechanic NexusWarbeasts' Truce Crystal uses), then watch it grow up to full size (or bigger) over real time, the same Attribute.GENERIC_SCALE growth curve NexusGrowth gives players, staying tamed to its owner the whole way.
+softdepend: [NexusWaiting]
+
+commands:
+  nexushatchlings:
+    description: Manage tamed hatchlings.
+    aliases: [hatchlings, nexushatch]
+    usage: /nexushatchlings <give [player]|list|release <target>|traits|reload>
+
+permissions:
+  nexushatchlings.use:
+    description: Craft/use the Hatchling Crystal to tame mobs, and manage your own tamed hatchlings.
+    default: true
+  nexushatchlings.admin:
+    description: Give crystals to anyone, and reload config.
+    default: op
